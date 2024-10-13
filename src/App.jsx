@@ -19,15 +19,13 @@ function App() {
   const [data, setData] = useState(false);
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
             <Routes>
-              {/* <Route path="/" element={ [<Navbar/>,<DarkMode SetDarkModeValue={setData} />, <Header darkmodeValue={data}  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>,<Footer/>]}> */}
               <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>,<Footer/>]}>
-                {/* <Route path="About" element={ [ <Header/>,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>]} /> */}
-                {/* <Route path="About" element={<Header/>} /> */}
               </Route>
             </Routes>
-          </BrowserRouter>
+        </BrowserRouter> */}
+        sdawe
     </> 
   )
 } 
