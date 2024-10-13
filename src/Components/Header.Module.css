@@ -1,0 +1,19 @@
+.image{
+    border: 10px solid white;
+    box-shadow: 25px 20px #E6E8EB;
+    
+}
+.paragraph > p , .paragraph > div{
+    padding-top:7px;
+}
+@media not all and (min-width: 1024px) { 
+    .paragraph > p , .paragraph > div{
+        padding-top:14px;
+    }
+ }
+
+ 
+html{
+    scroll-behavior: smooth;
+
+}
