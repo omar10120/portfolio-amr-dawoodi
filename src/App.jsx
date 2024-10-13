@@ -19,13 +19,12 @@ function App() {
   const [data, setData] = useState(false);
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
             <Routes>
               <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>,<Footer/>]}>
               </Route>
             </Routes>
-        </BrowserRouter> */}
-        sdawe
+        </BrowserRouter>
     </> 
   )
 } 
