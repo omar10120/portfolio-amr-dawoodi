@@ -15,7 +15,7 @@ function About() {
         <div className={`container mx-auto w-full  flex h-dvh py-8 h-full max-lg:flex-col relative ${darkMode?'bg-about-body-grey':''} `}>
             <div class="flex w-1/2 max-lg:w-full  justify-center items-center max-lg:my-12 ">
                 <div className=' h-96 w-3/5 max-lg:w-full ' >
-                <img className="object-fill h-96 w-96 image max-lg:w-full	" src='src/assets/selfe.jpg'/>
+                <img className="object-fill h-96 w-96 image max-lg:w-full	" src='src/images/selfe.jpg'/>
                 </div>
             </div>
             <div class="flex w-1/2 flex-col justify-center items-center  max-lg:w-full   ">
