@@ -21,7 +21,7 @@ import React, { useState, useEffect } from 'react';
         <div className="flex w-2/3  flex-col justify-around max-sm:w-full max-sm:justify-center max-sm:py-5   " >
             <div>
                 <h1 className="text-3xl font-bold my-1 ">
-                Hi,Im A'mr test</h1>
+                Hi,Im A'mr</h1>
                 <p className='text-xl'>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications for over 7 years, I still love it as if it was something new.</p>
             </div>
             <div >
