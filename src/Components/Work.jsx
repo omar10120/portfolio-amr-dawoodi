@@ -34,7 +34,7 @@ function Work() {
             <div className='text-2xl '>some of the noteworthy projects i have built:</div>
             <div class="grid grid-cols-1 gap-y-20  w-full py-5 ">
                 {navigation.map((item) => (
-                            <div className={`flex w-full space-x-8 max-sm:space-x-0 space-y-8 text shadow-inner rounded-xl max-xl:flex-col ${darkMode?'bg-about-body-grey':'bg-dark'} ${item.reverse} `} >
+                            <div className={`flex w-full space-x-8 max-sm:space-x-0 space-y-8 text shadow-inner rounded-xl max-xl:flex-col ${darkMode?'bg-white':'bg-dark'} ${item.reverse} `} >
                                 <div className={`w-1/2 ${darkMode?'bg-about-body-grey': 'bg-tags'} flex justify-center items-center rounded-xl py-18 max-xl:w-full py-8`}>
                                     <img src="/src/images/img_flowers.jpg" className='h-70 w-96 rounded-xl' alt="" />
                                 </div>

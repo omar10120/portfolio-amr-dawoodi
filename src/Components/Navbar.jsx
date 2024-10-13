@@ -15,7 +15,7 @@ const navigation = [
 
 
   function classNames(...classes) {
-  
+    
 
     return classes.filter(Boolean).join(' ')
   }
@@ -85,6 +85,7 @@ function ThemeSwitcher({ SetDarkModeValue }) {
               <div className="flex space-x-6">
                 {navigation.map((item) => (
                   <a
+                   
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}

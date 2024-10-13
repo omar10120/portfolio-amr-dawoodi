@@ -11,12 +11,11 @@ function About() {
          //end darkmode
   return (
     <>
-        
-        <div id='about' className={` container mx-auto  flex items-center justify-center w-full py-2 ${darkMode?'bg-about-body-grey':''} `}><p className={`  rounded-xl p-2 my-10 ${darkMode?'bg-about-grey text-black':'bg-tags text-white'} `}>about me</p> </div>
-        <div className={`container mx-auto w-full  flex h-dvh max-lg:h-auto  max-lg:flex-col relative ${darkMode?'bg-about-body-grey':''} `}>
+        <div id='about' className={` container mx-auto  flex items-center justify-center w-full py-5  ${darkMode?'bg-about-body-grey':''} `}><p className={`  rounded-xl p-2 my-10 ${darkMode?'bg-about-grey text-black':'bg-tags text-white'} `}>about me</p> </div>
+        <div className={`container mx-auto w-full  flex h-dvh py-8 h-full max-lg:flex-col relative ${darkMode?'bg-about-body-grey':''} `}>
             <div class="flex w-1/2 max-lg:w-full  justify-center items-center max-lg:my-12 ">
                 <div className=' h-96 w-3/5 max-lg:w-full ' >
-                <img className="object-fill h-96 w-96 image max-lg:w-full	" src='/src/images/img_flowers.jpg'/>
+                <img className="object-fill h-96 w-96 image max-lg:w-full	" src='/src/images/selfe.jpg'/>
                 </div>
             </div>
             <div class="flex w-1/2 flex-col justify-center items-center  max-lg:w-full   ">
