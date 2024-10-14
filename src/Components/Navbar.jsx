@@ -5,13 +5,14 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '#about', current: false },
-  { name: 'Work', href: '#work', current: false },
-  { name: 'Testmonials', href: '#Testimonials', current: false },
-  { name: 'Contact', href: '#Footer', current: false },
-]
+// const navigation = [
+//   { name: 'Home', href: '/', current: true },
+//   { name: 'About', href: '#about', current:  false  },
+//   { name: 'Work', href: '#work', current: false },
+//   { name: 'Testmonials', href: '#Testimonials', current: false },
+//   { name: 'Contact', href: '#Footer', current: false },
+// ]
+
 
 
   function classNames(...classes) {
@@ -19,9 +20,29 @@ const navigation = [
 
     return classes.filter(Boolean).join(' ')
   }
-function ThemeSwitcher({ SetDarkModeValue }) {
+function ThemeSwitcher({ SetDarkModeValue   }) {
 
   const [darkMode, setDarkMode] = useState(false);
+
+
+  const [navigation, setNavigation] = useState([
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '#about', current: false },
+    { name: 'Work', href: '#work', current: false },
+    { name: 'Testimonials', href: '#Testimonials', current: false },
+    { name: 'Contact', href: '#Footer', current: false },
+  ]);
+
+  const handleClick = (clickedItem) => {
+    setNavigation((prevNavigation) =>
+      prevNavigation.map((item) =>
+        item.name === clickedItem.name
+          ? { ...item, current: true } // Set current to true for the clicked item
+          : { ...item, current: false } // Set current to false for other items
+      )
+    );
+  };
+  
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -39,12 +60,9 @@ function ThemeSwitcher({ SetDarkModeValue }) {
     SetDarkModeValue((prevMode) => !prevMode); 
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
       document.body.classList.toggle('bg-dark' , !isDarkMode);
-    
-
-    
-
+  
   };
-  const [data, setData] = useState(false);
+
 
   return (
     
@@ -72,31 +90,30 @@ function ThemeSwitcher({ SetDarkModeValue }) {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
+              {/* <img
                 alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                src="/src/images/cv.png"
                 className="h-8 w-auto"
               />
-                  
+                   */}
 
 
             </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-6">
+            <div className="hidden sm:ml-6 sm:block ">
+              <div className="flex space-x-6 ">
                 {navigation.map((item) => (
                   <a
-                   
-                    key={item.name}
+                   key={item.name}
+                   onClick={() => handleClick(item)}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-grey-900 text-black ' : 'text-gray-400 hover:bg-gray-700 hover:text-white',
+                      item.current ? `${darkMode?'bg-white':'bg-grey-900'}  text-black ` : `  text-gray-400 hover:bg-gray-700 hover:text-white `,
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
-                  >
+                    >
                     {item.name}
                   </a>
-                  
                 ))} 
                      
               </div>
@@ -129,14 +146,16 @@ function ThemeSwitcher({ SetDarkModeValue }) {
             
             <button
             onClick={toggleDarkMode}
-            className={`px-4 py-2 rounded-full  ${
+            className={`px-2 py-2 rounded-full  ${
             darkMode ? 'bg-yellow' : 'bg-gray-800'
             } ${
               darkMode ? 'text-gray-900' : 'text-white '
             } transition-colors duration-200`}
             >
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
+            {/* {darkMode ? 'Light Mode' : 'Dark Mode'} */}
+            {darkMode ? <img src="./src/images/dark.png" className='w-6 h-6' alt="" /> : <img src="./src/images/light.png" className='w-6 h-6' alt="" />}
         </button>    
+            
         
             <div className="relative ml-3">                
               <div>

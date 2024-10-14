@@ -11,18 +11,22 @@ import Work from "./Components/Work";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
 import DarkMode from "./Components/DarkMode";
-
 import './App.css'
 
 function App() {
-
+  
   const [data, setData] = useState(false);
+  window.addEventListener(("blur"),()=>{
+    document.title = "Breakup :(";
+  });
+  window.addEventListener(("focus"),()=>{
+    document.title = "A'mr dawoodi resume";
+  });
   return (
     <>
       <BrowserRouter>
             <Routes>
               <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>,<Footer/>]}>
-
               </Route>
             </Routes>
           </BrowserRouter>
