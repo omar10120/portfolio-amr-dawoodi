@@ -51,7 +51,7 @@ import React, { useState, useEffect } from 'react';
         </div>
         <div class="flex w-1/3 max-sm:w-full  justify-center items-center max-sm:my-12  ">
             <div className=' h-48 w-3/5' >
-              <img className="object-fill h-48 w-96  image	" src='/src/images/me.jpg'/>
+              <img className="object-fill h-48 w-96  image	" src='https://i.ibb.co/w6f3rQz/IMG-20241013-184915.jpg'/>
             </div>
 
         </div>

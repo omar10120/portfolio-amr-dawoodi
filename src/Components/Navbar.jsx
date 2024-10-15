@@ -88,13 +88,7 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              {/* <img
-                alt="Your Company"
-                src="/src/images/cv.png"
-                className="h-8 w-auto"
-              />
-                   */}
-
+       
 
             </div>
             <div className="hidden sm:ml-6 sm:block ">
@@ -118,31 +112,7 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          {/* <DarkMode SetDarkModeVal0e={setData} /> */}
-          {/* <button
-            onClick={toggleDarkMode}
-            className={`px-4 py-2 rounded-full ${
-            darkMode ? 'bg-yellow' : 'bg-gray-800'
-            } ${
-            darkMode ? 'text-gray-900' : 'text-white '
-            } transition-colors duration-200`}
-        >
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>  */}
-            {/* <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="h-6 w-6" />
-              
-            </button> */}
-
-            {/* Profile dropdown */}
-            {/* <DarkMode SetDarkModeValue={setData} /> */}
-
-            
+        
             <button
             onClick={toggleDarkMode}
             className={`px-2 py-2 rounded-full  ${
@@ -151,8 +121,6 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
               darkMode ? 'text-gray-900' : 'text-white '
             } transition-colors duration-200`}
             >
-            {/* {darkMode ? 'Light Mode' : 'Dark Mode'} */}
-            {/* {darkMode ? <img src="./src/images/dark.png" className='w-6 h-6' alt="" /> : <img src="./src/images/light.png" className='w-6 h-6' alt="" />} */}
             {darkMode ? 
             
 
@@ -359,13 +327,14 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
 
 
 
-
+        {/* <a href="https://online.flippingbook.com/view/747196872/" class="fbo-embed" data-fbo-id="81805f0d4f" data-fbo-ratio="3:2" data-fbo-lightbox="yes" data-fbo-width="100%" data-fbo-height="auto" data-fbo-version="1" style="max-width: 100%">omar dwaoodi resume</a><script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=747196872"></script> */}
             
         
             <div className="relative ml-3">   
                            
               <div>
-                <a href="/src/CvFile/a'mr dawoodi resume.pdf" download={"a'mr dawoodi resume.pdf"}>
+                {/* <a href="/src/CvFile/a'mr dawoodi resume.pdf" download={"a'mr dawoodi resume.pdf"}> */}
+                <a href="https://drive.usercontent.google.com/u/0/uc?id=1F3iQxghoAlSynj5zDF1VDbk1WKRhxJoi&export=download" download={"a'mr dawoodi resume.pdf"}>
                   <button className={`relative flex rounded-full ${darkMode?'bg-white text-black font-bold':'bg-darker text-white'}  text-sm rounded-lg p-2  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 `}>
                       Download CV     
                   </button>
