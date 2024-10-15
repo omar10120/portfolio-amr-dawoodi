@@ -22,6 +22,9 @@ function App() {
   window.addEventListener(("focus"),()=>{
     document.title = "A'mr dawoodi resume";
   });
+
+
+  
   return (
     <>
       <BrowserRouter>

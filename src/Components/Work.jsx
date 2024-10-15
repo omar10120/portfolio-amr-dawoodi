@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const navigation = [
-    { name: 'About', src: '/src/images/img_flowers.jpg', current: true },
-    { name: 'Work', src: '/src/images/img_flowers.jpg', current: false, reverse : 'flex-row-reverse' },
-    { name: 'Work', src: '/src/images/img_flowers.jpg', current: false },
+    {name: 'Bird View', freamwork1: 'HTML5',freamwork2: 'CSS', freamwork3: 'Javascript',freamwork4: 'React', src: '/src/images/job2.png', current: true,hidden:true , href : 'https://design-web-template.vercel.app/', text: 'Template contains 14 sections talking about Casper Technical Company , It was an architrave, it was a layer of financing and, at the same time, the airline. Mauris flatters the elit, needs the tincidunt nibh pulvinar a. What kind of classroom? Accumulate that financing and, at the same time, the airline. Mauris flatters the truck driver, needs a developer.'},
+    {name: 'A\'mr Company',freamwork1: 'HTML5',freamwork2: 'CSS', freamwork3: 'Javascript',freamwork4: 'PHP', src: '/src/images/job1.png', current: false,hidden :true , reverse : 'flex-row-reverse', href : 'https://amrcompany.vercel.app/', text: 'The template contains 10 sections that talk about A\'mr Al-Majedea Company, and provide an explanation and presentation of the services and works of Omar Al-Majedea Company, and a section to communicate with the company and explain some of the company’s works.' },
+    {name: 'Mountains View',freamwork1: 'HTML5',freamwork2: 'CSS', freamwork3: 'Javascript',freamwork4: 'PHP',  src: '/src/images/job3.png', current: false ,hidden:true,  href : 'https://mountains-view.vercel.app/', text:'The portfolio example contains 7 sections , with responsive design and information about me'},
+    {name: 'Graphic Desgin Template',freamwork1: 'HTML5',freamwork2: 'CSS', freamwork3: 'Javascript',freamwork4: 'PHP',  src: '/src/images/job4.png', current: false ,hidden:true,  reverse : 'flex-row-reverse',  href : 'https://graphic-and-web-design-emqg0gs8n-omar10120s-projects.vercel.app/', text:'graphic and web design template with 9 sections '},
 
 
   ]
@@ -36,39 +37,50 @@ function Work() {
                 {navigation.map((item) => (
                             <div className={`flex w-full space-x-8 max-sm:space-x-0 space-y-8 text shadow-inner rounded-xl max-xl:flex-col ${darkMode?'bg-white':'bg-dark'} ${item.reverse} `} >
                                 <div className={`w-1/2 ${darkMode?'bg-about-body-grey': 'bg-tags'} flex justify-center items-center rounded-xl py-18 max-xl:w-full py-8`}>
-                                    <img src="/src/images/img_flowers.jpg" className='h-70 w-96 rounded-xl' alt="" />
+                                    <img src={item.src} className='h-75 w-96 rounded-xl' alt="" />
                                 </div>
                                 <div className='w-1/2 flex  flex flex-col  h-full  space-y-5 w-full   '>
-                                    <div className={`font-bold text-2x1 ${darkMode?'':'text-white'} `}>Fiskill</div>
-                                    <div className={`text-xl ${darkMode?'':'text-white'} `}>Lorem ipsum some of the noteworthy projects i have built some of the noteworthy projects i have built some of the noteworthy projects i have built some of the noteworthy projects i have built some of the noteworthy projects i have built </div>
+                                    <div className={`font-bold text-2x1 ${darkMode?'':'text-white'} `}>{item.name}</div>
+                                    <div className={`text-xl ${darkMode?'':'text-white'} `}>{item.text} </div>
                                     <div className='grid grid-cols-1 gap-4 '>
                                     {/* {navigation2.map((item) => (  */}
                                         <div className='flex w-full space-x-10 max-sm:space-x-3 '>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.name}</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.name}</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.name}</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.name}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork1}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork2}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork3}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork4}</p></div>
                                         </div>
                                         {/* ))}    */}
-                                        <div className='flex w-full space-x-10 max-sm:space-x-3'>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>Work</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>next js</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>typescript</p></div>
-                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>pythondaw</p></div>
+                                        <div className={`flex w-full space-x-10 max-sm:space-x-3 ${item.hidden?'hidden':''}`}>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork1}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork2} </p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork3}</p></div>
+                                            <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>{item.freamwork4}</p></div>
                                         </div>
-                                        <div className='flex w-full space-x-10 max-sm:space-x-3'>
+                                        <div className={`flex w-full space-x-10 max-sm:space-x-3 ${item.hidden?'hidden':''} `}>
                                             <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>pythonweq</p></div>
                                             <div ><p className={` ${darkMode?'bg-about-grey': 'bg-tags text-white'}  rounded-xl p-3 max-xl:p-2 max-sm:p-2`}>pythonwa</p></div>
                                         </div>
                                     </div>
-                                    <div className='py-3'><svg fill="#000000" height="15x" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                    
+                                    <div className='py-3 w-10 flex  justify-center items-center group hover:bg-about-body-grey '>
+                                        <div className=' absolute p-2   w-30 mb-20 mr-17 opacity-0   ease-in-out duration-300
+                                        after:content-[""] after:absolute after:left-[42%] after:top-full after:w-0 after:h-0 after:border-l-[10px] after:border-r-[10px] after:border-t-[10px] after:border-l-transparent after:border-r-transparent after:border-t-dark
+                                         rounded-2xl text-black text-white bg-dark flex justify-center  items-center group-hover:opacity-100 '>Live Demo</div>
+                                       
+                                        <a href={item.href} target='_blank'  >
+
+                                        <svg fill="#000000" height="15x"  width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                         viewBox="0 0 384.97 384.97" xml:space="preserve"><g><g id="Fullscreen_1_">
                                             <path d="M372.939,216.545c-6.123,0-12.03,5.269-12.03,12.03v132.333H24.061V24.061h132.333c6.388,0,12.03-5.642,12.03-12.03
                                                 S162.409,0,156.394,0H24.061C10.767,0,0,10.767,0,24.061v336.848c0,13.293,10.767,24.061,24.061,24.061h336.848
                                                 c13.293,0,24.061-10.767,24.061-24.061V228.395C384.97,221.731,380.085,216.545,372.939,216.545z"/>
                                             <path d="M372.939,0H252.636c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h91.382L99.635,268.432
                                                 c-4.668,4.668-4.668,12.235,0,16.903c4.668,4.668,12.235,4.668,16.891,0L360.909,40.951v91.382c0,6.641,5.39,12.03,12.03,12.03
-                                                s12.03-5.39,12.03-12.03V12.03l0,0C384.97,5.558,379.412,0,372.939,0z"/></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg></div>
+                                                s12.03-5.39,12.03-12.03V12.03l0,0C384.97,5.558,379.412,0,372.939,0z"/></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg>
+                                                {/* <button className='w-20 py-2   rounded-2xl bg-dark text-white'>live demo</button> */}
+                                                </a>
+                                                </div>
                                      </div>
                              </div>
                         ))}                 

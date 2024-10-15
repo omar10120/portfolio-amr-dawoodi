@@ -25,6 +25,7 @@ export default {
         'regal-blue': '#243c5a',
         'about-grey': '#E6E8EB',
         'about-body-grey': '#FAF9FC',
+        'customegrey' : '#cbd5e1',
         'red':'red' ,
         'yellow': 'yellow',
         'dark': '#111827', // Define custom dark mode background

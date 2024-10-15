@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import DarkMode from './DarkMode'
 import { Clipboard } from "flowbite-react";
 const navigation = [
     { name: 'About', src: 'https://www.vectorlogo.zone/logos/upwork/upwork-ar21.svg', current: true },
@@ -8,6 +8,7 @@ const navigation = [
 
   ]
 function Footer() {
+     const [data, setData] = useState(false);
 
         //start darkmode
         const [darkMode, setDarkMode] = useState(false);
@@ -19,6 +20,10 @@ function Footer() {
         //end darkmode
   return (
     <>
+
+
+
+
         <div id='Footer' className={`container mx-auto w-full    flex flex-col items-center text-center space-y-8 py-5 ${darkMode?'bg-white ':'bg-darker text-white'} `}>
             <div ><p className={` rounded-xl p-2 px-7 ${darkMode ? 'bg-about-grey': 'bg-tags'} `}>Get in touch</p></div>
             <div className={`text-xl `}>What next? Fell free research out to me if you're looking for a developer , have a quaility , or simplay want to connect. </div>
@@ -47,9 +52,9 @@ function Footer() {
             </div>
             <div className='w-full text-xl '>you may also find me on following platforms</div>
             <div className='w-full  flex justify-center items-center space-x-5 '>
-                <div><a target='_blank' href="https://github.com/omar10120/"><svg className={`h-8 w-8 ${darkMode?'text-gray-500':'text-white'}`}  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></a></div>
-                <div><a target='_blank' href="https://www.facebook.com/amr.dawode.7"><svg className={`h-8 w-8 ${darkMode?'text-gray-500':'text-white'}`}  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></a></div>
-                <div><a target='_blank' href="https://www.linkedin.com/in/omar-dawoodi-65044b201/"><svg className={`h-8 w-8 ${darkMode?'text-gray-500':'text-white'}`}  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" /></svg></a></div>
+                <div> <a target='_blank' href="https://github.com/omar10120/"> <svg viewBox="0 0 128 128" className='w-8 h-8'><g fill={darkMode?'#181616':'white'}><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path></g></svg></a></div>
+                <div><a target='_blank' href="https://www.facebook.com/amr.dawode.7"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" className="h-8 w-8" /></a></div>
+                <div><a target='_blank' href="https://www.linkedin.com/in/omar-dawoodi-65044b201/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" className="h-8 w-8"/></a></div>
             </div>
         </div>
     </>
