@@ -354,7 +354,7 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
             <div className="relative ml-3">         
               <div className=' '>
 
-                <a href="https://drive.usercontent.google.com/u/0/uc?id=1F3iQxghoAlSynj5zDF1VDbk1WKRhxJoi&export=download" download={"a'mr dawoodi resume.pdf"}>
+                <a href="https://drive.usercontent.google.com/u/0/uc?id=1zUsnXldjhGXl9NEl0ME6o2LemVah4qhl&export=download" download={"a'mr dawoodi resume.pdf"}>
                 {loading.map((item) => (        
 
                     <button 
