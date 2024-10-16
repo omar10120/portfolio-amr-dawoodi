@@ -22,7 +22,7 @@ import React, { useState, useEffect } from 'react';
             <div>
                 <h1 className="text-3xl font-bold my-1 ">
                 Hi,Im A'mr</h1>
-                <p className='text-xl'>I am a full-stack developer (React.js & PHP & ASP.Net & C#) with a focus on creating (and sometimes designing) exceptional digital experiences that are fast, accessible, visually engaging, and responsive. I have been building web and desktop applications for over 4 years, and I am always on the cutting edge.</p>
+                <p className='text-xl'>I am a full-stack developer (React.js & PHP & ASP.Net & C#) with a focus on creating and designing exceptional digital experiences that are fast, accessible, visually engaging, and responsive. I have been building web and desktop applications for over 4 years, and I am always on the cutting edge.</p>
             </div>
             <div >
 

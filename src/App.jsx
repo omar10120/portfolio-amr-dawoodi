@@ -9,6 +9,8 @@ import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Work from "./Components/Work";
 import Testimonials from "./Components/Testimonials";
+import Eduction from './Components/Eduction';
+
 import Footer from "./Components/Footer";
 import DarkMode from "./Components/DarkMode";
 import './App.css'
@@ -29,7 +31,7 @@ function App() {
     <>
       <BrowserRouter>
             <Routes>
-              <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Testimonials/>,<Footer/>]}>
+              <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Testimonials/>,<Footer/>]}>
               </Route>
             </Routes>
           </BrowserRouter>
