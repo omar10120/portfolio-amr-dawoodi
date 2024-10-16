@@ -1,0 +1,6 @@
+@keyframes loadingAnim {
+    to {
+      background-position: -200% 0, -100% 100%;
+    }
+  }
+  
