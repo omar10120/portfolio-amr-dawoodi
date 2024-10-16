@@ -34,7 +34,7 @@ function App() {
     // Simulate an API call or data loading
     const timer = setTimeout(() => {
       setIsLoading(false); // After the "loading" completes, set isLoading to false
-    }, 100); // Example delay of 3 seconds
+    }, 3000); // Example delay of 3 seconds
 
     // Cleanup the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -51,7 +51,8 @@ function App() {
     : 
         <BrowserRouter>
             <Routes>
-              <Route path="/"  element={ [<Translate/>,<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}>
+              {/* <Route path="/"  element={ [<Translate/>,<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}> */}
+              <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}>
               </Route>
             </Routes>
        </BrowserRouter>
