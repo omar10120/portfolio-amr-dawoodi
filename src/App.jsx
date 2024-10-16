@@ -31,7 +31,7 @@ function App() {
     <>
       <BrowserRouter>
             <Routes>
-              <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Testimonials/>,<Footer/>]}>
+              <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}>
               </Route>
             </Routes>
           </BrowserRouter>
