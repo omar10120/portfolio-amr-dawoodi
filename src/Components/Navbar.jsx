@@ -38,6 +38,10 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
     { loadingValue: false },
 
   ]);
+  const [CV, setcv] = useState([
+    { cvhref: 'https://drive.usercontent.google.com/u/0/uc?id=1L4LwiPpIccQz0pOBoISvAVKij1D4gc6e&export=download' },
+
+  ]);
   const handleClick = (clickedItem) => {
     setNavigation((prevNavigation) =>
       prevNavigation.map((item) =>
@@ -353,8 +357,9 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
         </button>    
             <div className="relative ml-3">         
               <div className=' '>
-
-                <a href="https://drive.usercontent.google.com/u/0/uc?id=1zUsnXldjhGXl9NEl0ME6o2LemVah4qhl&export=download" download={"a'mr dawoodi resume.pdf"}>
+             
+                  <a href="https://drive.usercontent.google.com/u/0/uc?id=1L4LwiPpIccQz0pOBoISvAVKij1D4gc6e&export=download" download={"a'mr dawoodi resume.pdf"}>
+                  
                 {loading.map((item) => (        
 
                     <button 
