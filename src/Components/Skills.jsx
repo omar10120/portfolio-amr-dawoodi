@@ -24,14 +24,14 @@ function Skills() {
      const [darkMode, setDarkMode] = useState(false);
      useEffect(() => {
          // setDarkMode(darkmodeValue)  
-         const value = localStorage.getItem('darkMode') === 'false' ;
+         const value = localStorage.getItem('darkMode') ;
          setDarkMode(value);
      })
      //end darkmode
   return (
     <>
-        <div className={`container mx-auto w-full  max-xl:h-auto h-full flex flex-col justify-evenly items-center  max-lg:flex-col relative ${darkMode ? 'bg-white' : 'bg-darker text-white 	'}  my-10 space-y-5 `}>
-            <div className='max-xl:my-10'><p className={`${darkMode ? 'bg-about-grey' : 'bg-tags'}  rounded-xl p-2 px-7  `}>Skills</p></div>
+        <div className={`container mx-auto w-full  max-xl:h-auto h-full flex flex-col justify-evenly items-center  max-lg:flex-col relative ${darkMode == 'false' ? 'bg-white' : 'bg-darker text-white 	'}  my-10 space-y-5 `}>
+            <div className='max-xl:my-10'><p className={`${darkMode == 'false' ? 'bg-about-grey' : 'bg-tags'}  rounded-xl p-2 px-7  `}>Skills</p></div>
             <div className='text-2xl max-xl:my-10'>The skills, tools and technologies i am really good at :</div>
             <div class="grid grid-cols-8 gap-12 max-sm:grid-cols-3 max-xl:grid-cols-4 ">
                 {navigation.map((item) => (
