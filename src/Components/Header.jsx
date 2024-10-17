@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
     const [langue, setlangue] = useState('');
     useEffect(() => {
 
-        const value = localStorage.getItem('darkMode')=== 'false' ;
+        const value = localStorage.getItem('darkMode') ;
         const lang = localStorage.getItem('language');
         setlangue(lang);
         setDarkMode(value);
