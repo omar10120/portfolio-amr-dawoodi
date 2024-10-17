@@ -5,11 +5,6 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
-
-
-
-
-
   function classNames(...classes) {
     
 
@@ -19,8 +14,6 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
 
   const [darkMode, setDarkMode] = useState(false);
   
-
-
   const [navigation, setNavigation] = useState([
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '#about', current: false },
@@ -35,6 +28,7 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
   ]);
   const [CV, setcv] = useState([
     { cvHref: 'https://drive.usercontent.google.com/u/0/uc?id=1L4LwiPpIccQz0pOBoISvAVKij1D4gc6e&export=download' },
+
 
   ]);
   const handleClick = (clickedItem) => {
@@ -80,6 +74,9 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
     // document.documentElement.classList.toggle('dark', darkMode);
     localStorage.setItem('darkMode', darkMode);
      setDarkMode(darkMode);
+     SetDarkModeValue(darkMode);
+     
+     
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -87,8 +84,8 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
     SetDarkModeValue((prevMode) => !prevMode); 
 
     //change background-color 
-    const isDarkMode = localStorage.getItem('darkMode') == 'true' ;
-      document.body.classList.toggle('bg-dark' , !isDarkMode);
+    const isDarkMode = localStorage.getItem('darkMode') ;
+    document.body.classList.toggle('bg-dark' , isDarkMode == 'false');
   };
   return (
     <>
@@ -344,7 +341,12 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
                 </button>    
               <div className="relative ml-3 flex ">         
                 <div>
-                      <a href="https://drive.usercontent.google.com/u/0/uc?id=14iGKltNFUo6wtgGhr32wBLT0J2viA9I3&export=download" download={"a'mr dawoodi resume.pdf"}>
+           
+
+                        
+                     <a href="https://drive.usercontent.google.com/u/0/uc?id=14iGKltNFUo6wtgGhr32wBLT0J2viA9I3&export=download" download={"a'mr dawoodi resume.pdf"}>
+                      
+               
                     {loading.map((item) => (        
 
                         <button 
