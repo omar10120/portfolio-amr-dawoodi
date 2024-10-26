@@ -19,7 +19,7 @@ function Eduction() {
     <>
         <div id='Testimonials' className={`container mx-auto w-full    flex flex-col items-center space-y-12 py-5 text-xl  ${darkMode == 'false'?'bg-about-body-grey':''} `}>
             <div ><p className={`${darkMode == 'false'?'bg-about-grey':'bg-tags text-white'}  rounded-xl p-2 px-7 `}>Eduction</p></div>
-            <div className={`text-2xl ${darkMode == 'false'?'': 'text-white'}`}>Nice Things people have said about me </div>
+            {/* <div className={`text-2xl ${darkMode == 'false'?'': 'text-white'}`}>Nice Things people have said about me </div> */}
             {/* <div className='w-full  flex max-xl:flex-col items-start justify-center  space-x-20 max-xl:space-x-0 max-xl:space-y-20  '> */}
             <div className='w-full  flex  flex-col items-start  justify-evenly  space-y-20    '>
             {navigation.map((item) => (

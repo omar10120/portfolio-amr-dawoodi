@@ -51,7 +51,6 @@ function App() {
     : 
         <BrowserRouter>
             <Routes>
-              {/* <Route path="/"  element={ [<Translate/>,<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}> */}
               <Route path="/"  element={ [<Navbar SetDarkModeValue={setData}/>, <Header  />,<About/>,<Skills/>,<Experience/>,<Work/>,<Eduction/>,<Footer/>]}>
               </Route>
             </Routes>
