@@ -64,11 +64,6 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
 
   
 
-  useEffect(() => {
-    // const isDarkMode = localStorage.getItem('darkMode');
-    // setDarkMode(isDarkMode);
-    // SetDarkModeValue(isDarkMode);
-  }, []);
 
   useEffect(() => {
     // document.documentElement.classList.toggle('dark', darkMode);
@@ -344,7 +339,7 @@ function ThemeSwitcher({ SetDarkModeValue   }) {
            
 
                         
-                     <a href="https://drive.usercontent.google.com/u/0/uc?id=14iGKltNFUo6wtgGhr32wBLT0J2viA9I3&export=download" download={"a'mr dawoodi resume.pdf"}>
+                     <a href="https://drive.usercontent.google.com/u/0/uc?id=1tASQdMHE7Kv2Mn6PTHgeXsOA2F1HuUk_&export=download" download={"a'mr dawoodi resume.pdf"}>
                       
                
                     {loading.map((item) => (        
